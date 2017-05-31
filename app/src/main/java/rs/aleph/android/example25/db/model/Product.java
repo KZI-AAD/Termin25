@@ -15,6 +15,7 @@ public class Product {
     public static final String FIELD_NAME_NAME   = "name";
     public static final String FIELD_NAME_DESCRIPTION   = "description";
     public static final String FIELD_NAME_RATING   = "rating";
+    public static final String FIELD_NAME_CATEGORY   = "category";
     public static final String FIELD_NAME_IMAGE  = "image";
 
     @DatabaseField(columnName = FIELD_NAME_ID, generatedId = true)
@@ -28,6 +29,9 @@ public class Product {
 
     @DatabaseField(columnName = FIELD_NAME_RATING)
     private float rating;
+
+    @DatabaseField(columnName = FIELD_NAME_CATEGORY)
+    private String categoty;
 
     @DatabaseField(columnName = FIELD_NAME_IMAGE)
     private String image;
@@ -76,6 +80,14 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getCategoty() {
+        return categoty;
+    }
+
+    public void setCategoty(String categoty) {
+        this.categoty = categoty;
     }
 
     @Override
